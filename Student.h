@@ -10,11 +10,20 @@
 #include "deltext1.h"
 
 
-
+/**
+ * @brief Represents a student with basic information.
+ *
+ * This class provides a simple representation of a student
+ * including their identifier, name, address, enrollment date,
+ * and credit hours.
+ */
 class Student {
 
 
 public:
+    /**
+     * @brief Default constructor.
+     */
     Student();
 
     char identifier[16]{};
@@ -24,12 +33,30 @@ public:
     char enrollDate[10]{};
     char creditHours[4]{};
 
+    /**
+     * @brief Clears all data members of the student.
+     */
     void clear();
 
+    /**
+     * @brief Initializes a FixedTextBuffer with student data.
+     * @param buffer The FixedTextBuffer to initialize.
+     * @return 0 on success, -1 on failure.
+     */
     static int InitBuffer(FixedTextBuffer &);
 
+    /**
+     * @brief Unpacks data from a FixedTextBuffer into the student object.
+     * @param buffer The FixedTextBuffer to unpack.
+     * @return 0 on success, -1 on failure.
+     */
     int Unpack(FixedTextBuffer &);
 
+    /**
+     * @brief Packs student data into a FixedTextBuffer.
+     * @param buffer The FixedTextBuffer to pack into.
+     * @return 0 on success, -1 on failure.
+     */
     int Pack(FixedTextBuffer &) const;
 
     static int InitBuffer(LengthTextBuffer &);
@@ -44,6 +71,10 @@ public:
 
     int Pack(DelimTextBuffer &) const;
 
+    /**
+     * @brief Prints the student information to the specified output stream.
+     * @param out The output stream to print to.
+     */
     void Print(ostream &);
 };
 

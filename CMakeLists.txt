@@ -10,5 +10,6 @@ add_executable(StudentTest Student.cpp
         deltext1.cpp
         fixtext1.cpp
         lentext1.cpp)
+
 add_executable(CourseRegistrationTest deltext1.cpp fixtext1.cpp lentext1.cpp CourseRegistration.cpp CourseRegistration.h
         CourseRegistrationDriver.cpp)

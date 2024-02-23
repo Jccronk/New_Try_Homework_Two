@@ -4,10 +4,47 @@
 
 #include "TestStudent.h"
 #include "fixtext1.h"
+#include "deltext1.h"
 #include "Student.h"
 #include <cstring>
 #include <fstream>
 
+/**
+ * @brief Tests the functionality of FixedTextBuffer with Student objects.
+ */
+void testFixText (){
+    Student student;
+    FixedTextBuffer Buff(5); // Adjust the number of fields according to Student's properties
+    Student::InitBuffer(Buff);
+
+    // Use strcpy to set values for Student properties
+    strcpy(student.identifier, "1234567890");
+    strcpy(student.firstName, "John");
+    strcpy(student.lastName, "Doe");
+    strcpy(student.address, "456 Elm St");
+    strcpy(student.enrollDate, "2024-02-23");
+    strcpy(student.creditHours, "15");
+
+    // Print, Pack, and I/O operations
+    student.Print(cout);
+    student.Pack(Buff);
+    Buff.Print(cout);
+
+    ofstream TestOut("fixtext.dat", ios::out | ios::binary); // Note the binary flag for binary write
+    Buff.Write(TestOut);
+    TestOut.close();
+
+    ifstream TestIn("fixtext.dat", ios::in | ios::binary); // Note the binary flag for binary read
+    FixedTextBuffer InBuff(5); // Ensure matching buffer size
+    Student::InitBuffer(InBuff);
+    InBuff.Read(TestIn);
+    student.Unpack(InBuff);
+    student.Print(cout);
+}
+
+/**
+ * @brief Tests the functionality of DelimTextBuffer with Student objects.
+ */
 void testDelText (){
     cout << "\nTesting DelimTextBuffer" << endl;
     Student student;
@@ -49,7 +86,9 @@ void testDelText (){
     student.Print(cout);
 }
 
-
+/**
+ * @brief Tests the functionality of LengthTextBuffer with Student objects.
+ */
 void testLenText (){
     cout << "\nTesting LengthTextBuffer" << endl;
     Student student;
@@ -94,36 +133,11 @@ void testLenText (){
 
 }
 
-void testFixText (){
-    Student student;
-    FixedTextBuffer Buff(5); // Adjust the number of fields according to Student's properties
-    Student::InitBuffer(Buff);
 
-    // Use strcpy to set values for Student properties
-    strcpy(student.identifier, "1234567890");
-    strcpy(student.firstName, "John");
-    strcpy(student.lastName, "Doe");
-    strcpy(student.address, "456 Elm St");
-    strcpy(student.enrollDate, "2024-02-23");
-    strcpy(student.creditHours, "15");
-
-    // Print, Pack, and I/O operations
-    student.Print(cout);
-    student.Pack(Buff);
-    Buff.Print(cout);
-
-    ofstream TestOut("fixtext.dat", ios::out | ios::binary); // Note the binary flag for binary write
-    Buff.Write(TestOut);
-    TestOut.close();
-
-    ifstream TestIn("fixtext.dat", ios::in | ios::binary); // Note the binary flag for binary read
-    FixedTextBuffer InBuff(5); // Ensure matching buffer size
-    Student::InitBuffer(InBuff);
-    InBuff.Read(TestIn);
-    student.Unpack(InBuff);
-    student.Print(cout);
-}
-
+/**
+ * @brief The main function to run all tests.
+ * @return 1
+ */
 int main(){
     testFixText ();
     testLenText ();
