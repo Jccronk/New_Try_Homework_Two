@@ -55,8 +55,8 @@ build CMakeFiles/StudentTest.dir/Student.cpp.o: CXX_COMPILER__StudentTest_unscan
   OBJECT_DIR = CMakeFiles/StudentTest.dir
   OBJECT_FILE_DIR = CMakeFiles/StudentTest.dir
 
-build CMakeFiles/StudentTest.dir/TestStudent.cpp.o: CXX_COMPILER__StudentTest_unscanned_Debug /Users/jakecronk/CLionProjects/Assignment2/TestStudent.cpp || cmake_object_order_depends_target_StudentTest
-  DEP_FILE = CMakeFiles/StudentTest.dir/TestStudent.cpp.o.d
+build CMakeFiles/StudentTest.dir/StudentDriver.cpp.o: CXX_COMPILER__StudentTest_unscanned_Debug /Users/jakecronk/CLionProjects/Assignment2/StudentDriver.cpp || cmake_object_order_depends_target_StudentTest
+  DEP_FILE = CMakeFiles/StudentTest.dir/StudentDriver.cpp.o.d
   FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/StudentTest.dir
   OBJECT_FILE_DIR = CMakeFiles/StudentTest.dir
@@ -87,7 +87,7 @@ build CMakeFiles/StudentTest.dir/lentext1.cpp.o: CXX_COMPILER__StudentTest_unsca
 #############################################
 # Link the executable StudentTest
 
-build StudentTest: CXX_EXECUTABLE_LINKER__StudentTest_Debug CMakeFiles/StudentTest.dir/Student.cpp.o CMakeFiles/StudentTest.dir/TestStudent.cpp.o CMakeFiles/StudentTest.dir/deltext1.cpp.o CMakeFiles/StudentTest.dir/fixtext1.cpp.o CMakeFiles/StudentTest.dir/lentext1.cpp.o
+build StudentTest: CXX_EXECUTABLE_LINKER__StudentTest_Debug CMakeFiles/StudentTest.dir/Student.cpp.o CMakeFiles/StudentTest.dir/StudentDriver.cpp.o CMakeFiles/StudentTest.dir/deltext1.cpp.o CMakeFiles/StudentTest.dir/fixtext1.cpp.o CMakeFiles/StudentTest.dir/lentext1.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/StudentTest.dir
   POST_BUILD = :
@@ -128,8 +128,8 @@ build CMakeFiles/CourseRegistrationTest.dir/CourseRegistration.cpp.o: CXX_COMPIL
   OBJECT_DIR = CMakeFiles/CourseRegistrationTest.dir
   OBJECT_FILE_DIR = CMakeFiles/CourseRegistrationTest.dir
 
-build CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationTest.cpp.o: CXX_COMPILER__CourseRegistrationTest_unscanned_Debug /Users/jakecronk/CLionProjects/Assignment2/CourseRegistrationTest.cpp || cmake_object_order_depends_target_CourseRegistrationTest
-  DEP_FILE = CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationTest.cpp.o.d
+build CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationDriver.cpp.o: CXX_COMPILER__CourseRegistrationTest_unscanned_Debug /Users/jakecronk/CLionProjects/Assignment2/CourseRegistrationDriver.cpp || cmake_object_order_depends_target_CourseRegistrationTest
+  DEP_FILE = CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationDriver.cpp.o.d
   FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/CourseRegistrationTest.dir
   OBJECT_FILE_DIR = CMakeFiles/CourseRegistrationTest.dir
@@ -142,7 +142,7 @@ build CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationTest.cpp.o: CXX_CO
 #############################################
 # Link the executable CourseRegistrationTest
 
-build CourseRegistrationTest: CXX_EXECUTABLE_LINKER__CourseRegistrationTest_Debug CMakeFiles/CourseRegistrationTest.dir/deltext1.cpp.o CMakeFiles/CourseRegistrationTest.dir/fixtext1.cpp.o CMakeFiles/CourseRegistrationTest.dir/lentext1.cpp.o CMakeFiles/CourseRegistrationTest.dir/CourseRegistration.cpp.o CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationTest.cpp.o
+build CourseRegistrationTest: CXX_EXECUTABLE_LINKER__CourseRegistrationTest_Debug CMakeFiles/CourseRegistrationTest.dir/deltext1.cpp.o CMakeFiles/CourseRegistrationTest.dir/fixtext1.cpp.o CMakeFiles/CourseRegistrationTest.dir/lentext1.cpp.o CMakeFiles/CourseRegistrationTest.dir/CourseRegistration.cpp.o CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationDriver.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
   OBJECT_DIR = CMakeFiles/CourseRegistrationTest.dir
   POST_BUILD = :
