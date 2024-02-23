@@ -1,13 +1,7 @@
 # ninja log v5
 7	593	1708677822509572835	CMakeFiles/StudentTest.dir/Student.cpp.o	b587a67e62ee1928
-2	412	1708677905724432883	CMakeFiles/StudentTest.dir/deltext1.cpp.o	749e8c34865a9bea
-0	668	1708677627261482445	CMakeFiles/StudentTest.dir/TestStudent.cpp.o	7f738406be497c51
-3	544	1708677942618862153	CMakeFiles/StudentTest.dir/fixtext1.cpp.o	3c72de55c464c87f
-2	403	1708677973483323424	CMakeFiles/StudentTest.dir/lentext1.cpp.o	949ce147795e530b
-404	519	1708677973599990085	StudentTest	e150f6d23cfefb2e
-2	550	1708678092872781021	CMakeFiles/StudentTest.dir/TestStudent.cpp.o	7f738406be497c51
-551	645	1708678092968751620	StudentTest	e150f6d23cfefb2e
-2	663	1708678188457951716	CMakeFiles/StudentTest.dir/TestStudent.cpp.o	7f738406be497c51
-663	766	1708678188560640937	StudentTest	e150f6d23cfefb2e
-3	712	1708678330778854999	CMakeFiles/StudentTest.dir/TestStudent.cpp.o	7f738406be497c51
 712	817	1708678330886951328	StudentTest	e150f6d23cfefb2e
+3	712	1708678330778854999	CMakeFiles/StudentTest.dir/TestStudent.cpp.o	7f738406be497c51
+2	403	1708677973483323424	CMakeFiles/StudentTest.dir/lentext1.cpp.o	949ce147795e530b
+3	544	1708677942618862153	CMakeFiles/StudentTest.dir/fixtext1.cpp.o	3c72de55c464c87f
+2	412	1708677905724432883	CMakeFiles/StudentTest.dir/deltext1.cpp.o	749e8c34865a9bea

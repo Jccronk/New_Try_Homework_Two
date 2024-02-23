@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,12 +31,20 @@
 					"name" : "Assignment2",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CourseRegistrationTest::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CourseRegistrationTest-Debug-2591c47e88172a1edf75.json",
+					"name" : "CourseRegistrationTest",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 0,
 					"id" : "StudentTest::@6890427a1f51a3e7e1df",

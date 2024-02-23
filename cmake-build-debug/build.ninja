@@ -95,6 +95,37 @@ build StudentTest: CXX_EXECUTABLE_LINKER__StudentTest_Debug CMakeFiles/StudentTe
   TARGET_FILE = StudentTest
   TARGET_PDB = StudentTest.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target CourseRegistrationTest
+
+
+#############################################
+# Order-only phony target for CourseRegistrationTest
+
+build cmake_object_order_depends_target_CourseRegistrationTest: phony || CMakeFiles/CourseRegistrationTest.dir
+
+build CMakeFiles/CourseRegistrationTest.dir/CourseRegistration.cpp.o: CXX_COMPILER__CourseRegistrationTest_unscanned_Debug /Users/jakecronk/CLionProjects/Assignment2/CourseRegistration.cpp || cmake_object_order_depends_target_CourseRegistrationTest
+  DEP_FILE = CMakeFiles/CourseRegistrationTest.dir/CourseRegistration.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/CourseRegistrationTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/CourseRegistrationTest.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target CourseRegistrationTest
+
+
+#############################################
+# Link the executable CourseRegistrationTest
+
+build CourseRegistrationTest: CXX_EXECUTABLE_LINKER__CourseRegistrationTest_Debug CMakeFiles/CourseRegistrationTest.dir/CourseRegistration.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk
+  OBJECT_DIR = CMakeFiles/CourseRegistrationTest.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = CourseRegistrationTest
+  TARGET_PDB = CourseRegistrationTest.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -129,7 +160,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /Users/jakecronk/CLionProjects/Assignment2/cmake-build-debug
 
-build all: phony StudentTest
+build all: phony StudentTest CourseRegistrationTest
 
 # =============================================================================
 # Built-in targets
