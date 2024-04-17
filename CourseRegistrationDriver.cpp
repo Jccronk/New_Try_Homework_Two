@@ -1,175 +1,44 @@
 #include "CourseRegistration.h"
-#include <cstring>
-#include <fstream>
-#include "fixtext1.h"
+#include <iostream>
+#include <sstream>
+#include "CourseRegistrationOutput.h"
+#include "CourseRegistrationOutputSorted.h"
 
-/**
- * @brief Test function for FixedTextBuffer with CourseRegistration.
- * 
- * This function demonstrates the usage of FixedTextBuffer with CourseRegistration objects.
- */
-void testFixText(){
-    cout << "\nTesting FixedTextBuffer with CourseRegistration" << endl;
 
-    // Create a CourseRegistration object and set its fields
-    CourseRegistration registration;
-    strcpy(registration.courseID, "CIS200   "); // Assuming field sizes including padding
-    strcpy(registration.studentID, "654321  "); // Adjust sizes as needed for your actual field definitions
-    strcpy(registration.numOfCredits, "4 "); // Assuming single digit number and a space for padding
-    strcpy(registration.courseGrade, "B "); // Assuming single letter grade and a space for padding
+int main() {
 
-    // Initialize FixedTextBuffer
-    FixedTextBuffer Buff (4);
-    CourseRegistration::InitBuffer(Buff);
+    std::string reg1Input = "12310211;33164;CHEM 210 General Chemistry 1;3;B";
+    std::string reg2Input = "12272140;33164;CHEM 210 General Chemistry 1;3;B";
+    std::string reg3Input = "12310211;11897;MATH 221 Survey of Calculus I;3;C";
 
-    // Print, Pack, and I/O operations
-    registration.Print(cout);
-    registration.Pack(Buff);
-    Buff.Print(cout);
+    CourseRegistration reg1, reg2, reg3;
+    std::istringstream issReg1(reg1Input), issReg2(reg2Input), issReg3(reg3Input);
 
-    // Write the buffer to a file, using a unique filename to avoid overwriting
-    ofstream TestOut("course_registration_fixtext.dat", ios::out | ios::binary);
-    Buff.Write(TestOut);
-    TestOut.close();
 
-    // Open the file for reading
-    ifstream TestIn("course_registration_fixtext.dat", ios::in | ios::binary);
-    FixedTextBuffer InBuff (4);
-    CourseRegistration::InitBuffer(InBuff);
+    issReg1 >> reg1;
+    issReg2 >> reg2;
+    issReg3 >> reg3;
 
-    // Create a new CourseRegistration object for loading data
-    CourseRegistration loadedRegistration;
 
-    // Read the buffer from the file and unpack it into the new CourseRegistration object
-    InBuff.Read(TestIn);
-    loadedRegistration.Unpack(InBuff);
-    loadedRegistration.Print(cout);
+    std::cout << "Comparing reg1 and reg2 by studentID:" << std::endl;
+    std::cout << "reg1 < reg2: " << (reg1 < reg2) << std::endl;
+    std::cout << "reg1 == reg2: " << (reg1 == reg2) << std::endl;
+    std::cout << "reg1 > reg2: " << (reg1 > reg2) << std::endl;
 
-    TestIn.close();
-}
+    std::cout << "\nComparing reg1 and reg3 (same studentID):" << std::endl;
+    std::cout << "reg1 < reg3: " << (reg1 < reg3) << std::endl;
+    std::cout << "reg1 == reg3: " << (reg1 == reg3) << std::endl; // This should be true
+    std::cout << "reg1 > reg3: " << (reg1 > reg3) << std::endl;
 
-/**
- * @brief Test function for LengthTextBuffer with CourseRegistration.
- * 
- * This function demonstrates the usage of LengthTextBuffer with CourseRegistration objects.
- */
-void testLenText() {
-    cout << "\nTesting LengthTextBuffer with CourseRegistration" << endl;
+    std::cout << "reg1 studentID: " << reg1.studentID << std::endl;
+    std::cout << "reg2 studentID: " << reg2.studentID << std::endl;
+    std::cout << "reg3 studentID: " << reg3.studentID << std::endl;
 
-    // Create a CourseRegistration object and set its fields
-    CourseRegistration registration;
-    strcpy(registration.courseID, "CIS101");
-    strcpy(registration.studentID, "123456");
-    strcpy(registration.numOfCredits, "3");
-    strcpy(registration.courseGrade, "A");
+    createCourseRegistrationOutput();
+    createSortedCourseRegistrationOutput();
 
-    // Initialize LengthTextBuffer
-    LengthTextBuffer Buff;
-    CourseRegistration::InitBuffer(Buff);
 
-    // Demonstrate packing, printing, and writing to a file
-    registration.Print(cout);
-    Buff.Print(cout);
-    cout << "pack CourseRegistration " << (registration.Pack(Buff) ? "Success" : "Failure") << endl;
-    Buff.Print(cout);
 
-    ofstream TestOut("course_registration_lentext.dat", ios::out | ios::binary);
-    Buff.Write(TestOut);
-    // Demonstrate changing a field and repacking
-    strcpy(registration.courseGrade, "B");
-    registration.Print(cout);
-    registration.Pack(Buff);
-    Buff.Write(TestOut);
-    TestOut.close();
 
-    // Demonstrate reading and unpacking from a file
-    ifstream TestIn("course_registration_lentext.dat", ios::in | ios::binary);
-    LengthTextBuffer InBuff;
-    CourseRegistration::InitBuffer(InBuff);
-
-    // Read and unpack the first record
-    cout << "read " << Buff.Read(TestIn) << endl;
-    cout << "unpack " << registration.Unpack(Buff) << endl;
-    registration.Print(cout);
-
-    // Attempt to read and unpack a second record
-    cout << "read " << Buff.Read(TestIn) << endl;
-    if (registration.Unpack(Buff)) {
-        cout << "unpack Success" << endl;
-        registration.Print(cout);
-    } else {
-        cout << "unpack Failure" << endl;
-    }
-
-    TestIn.close();
-}
-
-/**
- * @brief Test function for DelimTextBuffer with CourseRegistration.
- * 
- * This function demonstrates the usage of DelimTextBuffer with CourseRegistration objects.
- */
-void testDelText() {
-    cout << "\nTesting DelimTextBuffer with CourseRegistration" << endl;
-
-    // Create a CourseRegistration object and set its fields
-    CourseRegistration registration;
-    strcpy(registration.courseID, "CIS101");
-    strcpy(registration.studentID, "123456");
-    strcpy(registration.numOfCredits, "3");
-    strcpy(registration.courseGrade, "A");
-
-    // Initialize DelimTextBuffer
-    DelimTextBuffer Buff;
-    CourseRegistration::InitBuffer(Buff);
-
-    // Demonstrate packing, printing, and writing to a file
-    registration.Print(cout);
-    Buff.Print(cout);
-    cout << "pack CourseRegistration " << (registration.Pack(Buff) ? "Success" : "Failure") << endl;
-    Buff.Print(cout);
-
-    ofstream TestOut("course_registration_deltext.dat", ios::out | ios::binary);
-    Buff.Write(TestOut);
-    // Demonstrate changing a field and repacking
-    strcpy(registration.courseGrade, "B");
-    registration.Print(cout);
-    registration.Pack(Buff);
-    Buff.Write(TestOut);
-    TestOut.close();
-
-    // Demonstrate reading and unpacking from a file
-    ifstream TestIn("course_registration_deltext.dat", ios::in | ios::binary);
-    DelimTextBuffer InBuff;
-    CourseRegistration::InitBuffer(InBuff);
-
-    // Read and unpack the first record
-    cout << "read " << Buff.Read(TestIn) << endl;
-    cout << "unpack " << registration.Unpack(Buff) << endl;
-    registration.Print(cout);
-
-    // Attempt to read and unpack a second record
-    cout << "read " << Buff.Read(TestIn) << endl;
-    if (registration.Unpack(Buff)) {
-        cout << "unpack Success" << endl;
-        registration.Print(cout);
-    } else {
-        cout << "unpack Failure" << endl;
-    }
-
-    TestIn.close();
-}
-
-/**
- * @brief The main function.
- * 
- * Runs the test functions for FixedTextBuffer, LengthTextBuffer, and DelimTextBuffer with CourseRegistration objects.
- * 
- * @return int Returns 0 on successful execution.
- */
-int main(){
-    testFixText ();
-    testLenText ();
-    testDelText ();
     return 0;
 }

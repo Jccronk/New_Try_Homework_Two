@@ -1,0 +1,7 @@
+123102; 331; CHEM 210 General Chemistry 1; 3; B
+122721; 331; CHEM 210 General Chemistry 1; 3; B
+122621; 118; MATH 221 Survey of Calculus I; 3; C
+122721; 210; CSCI 301 Computer Science 2; 4; B
+123102; 118; MATH 221 Survey of Calculus I; 3; C
+122621; 331; CHEM 210 General Chemistry 1; 3; B
+123102; 341; CSCI 331 Software Systems; 3; A

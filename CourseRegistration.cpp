@@ -18,6 +18,7 @@ void CourseRegistration::Clear() {
     studentID[0]=0;
     numOfCredits[0]=0;
     courseGrade[0]=0;
+    courseDescription[0] = 0; // Initialize course description as empty
 }
 
 /**
@@ -34,6 +35,7 @@ int CourseRegistration::Pack (FixedTextBuffer & Buffer) const
     result = result && Buffer . Pack (studentID);
     result = result && Buffer . Pack (numOfCredits);
     result = result && Buffer . Pack (courseGrade);
+    result = result && Buffer.Pack(courseDescription); // Pack the course description
     return result;
 }
 
@@ -51,6 +53,7 @@ int CourseRegistration::Unpack (FixedTextBuffer & Buffer)
     result = result && Buffer . Unpack (studentID);
     result = result && Buffer . Unpack (numOfCredits);
     result = result && Buffer . Unpack (courseGrade);
+    result = result && Buffer.Unpack(courseDescription); // Unpack the course description
     return result;
 }
 
@@ -66,6 +69,7 @@ int CourseRegistration::InitBuffer (FixedTextBuffer & Buffer){
     result = result && Buffer . AddField (6); // studentID[7];
     result = result && Buffer . AddField (1); // numOfCredits[2];
     result = result && Buffer . AddField (1); // courseGrade[2];
+    result = result && Buffer . AddField(49); // courseDescription[50];
     return result;
 }
 
@@ -83,6 +87,7 @@ int CourseRegistration::Pack (LengthTextBuffer & Buffer) const
     result = result && Buffer . Pack (studentID);
     result = result && Buffer . Pack (numOfCredits);
     result = result && Buffer . Pack (courseGrade);
+    result = result && Buffer.Pack(courseDescription); // Pack the course description
     return result;
 }
 
@@ -99,6 +104,7 @@ int CourseRegistration::Unpack (LengthTextBuffer & Buffer)
     result = result && Buffer . Unpack (studentID);
     result = result && Buffer . Unpack (numOfCredits);
     result = result && Buffer . Unpack (courseGrade);
+    result = result && Buffer.Unpack(courseDescription); // Unpack the course description
     return result;
 }
 
@@ -127,6 +133,7 @@ int CourseRegistration::Pack (DelimTextBuffer & Buffer) const
     result = result && Buffer . Pack (studentID);
     result = result && Buffer . Pack (numOfCredits);
     result = result && Buffer . Pack (courseGrade);
+    result = result && Buffer.Pack(courseDescription); // Pack the course description
     return result;
 }
 
@@ -143,6 +150,7 @@ int CourseRegistration::Unpack (DelimTextBuffer & Buffer)
     result = result && Buffer . Unpack (studentID);
     result = result && Buffer . Unpack (numOfCredits);
     result = result && Buffer . Unpack (courseGrade);
+    result = result && Buffer.Unpack(courseDescription); // Unpack the course description
     return result;
 }
 
@@ -169,5 +177,59 @@ void CourseRegistration::Print (ostream & stream)
            << "\t  Student ID '"<<studentID<<"'\n"
            << "\tNumber of Credits '"<<numOfCredits<<"'\n"
            << "\t  Course Grade '"<<courseGrade<<"'\n"
+           << "\tCourse Description: '" << courseDescription << "'\n"
            <<flush;
+}
+
+// Overload the output operator << for the CourseRegistration class
+std::ostream& operator<<(std::ostream& os, const CourseRegistration& reg) {
+    // Output the course registration information separated by semicolons
+    os << reg.studentID << "; " << reg.courseID << "; "
+       << reg.courseDescription << "; " << reg.numOfCredits << "; "
+       << reg.courseGrade;
+    return os;
+}
+
+// Overload the input operator >>
+std::istream& operator>>(std::istream& is, CourseRegistration& reg) {
+    std::string temp;
+
+    // Student ID
+    std::getline(is, temp, ';');
+    std::strncpy(reg.studentID, temp.c_str(), sizeof(reg.studentID) - 1);
+    reg.studentID[sizeof(reg.studentID) - 1] = '\0';
+
+    // Course ID
+    std::getline(is, temp, ';');
+    std::strncpy(reg.courseID, temp.c_str(), sizeof(reg.courseID) - 1);
+    reg.courseID[sizeof(reg.courseID) - 1] = '\0';
+
+    // Course Description
+    std::getline(is, temp, ';');
+    std::strncpy(reg.courseDescription, temp.c_str(), sizeof(reg.courseDescription) - 1);
+    reg.courseDescription[sizeof(reg.courseDescription) - 1] = '\0';
+
+    // Number of Credits
+    std::getline(is, temp, ';');
+    std::strncpy(reg.numOfCredits, temp.c_str(), sizeof(reg.numOfCredits) - 1);
+    reg.numOfCredits[sizeof(reg.numOfCredits) - 1] = '\0';
+
+    // Course Grade
+    std::getline(is, temp);
+    std::strncpy(reg.courseGrade, temp.c_str(), sizeof(reg.courseGrade) - 1);
+    reg.courseGrade[sizeof(reg.courseGrade) - 1] = '\0';
+
+    return is;
+}
+
+bool operator<(const CourseRegistration& lhs, const CourseRegistration& rhs) {
+    return std::strcmp(lhs.studentID, rhs.studentID) < 0;
+}
+
+bool operator==(const CourseRegistration& lhs, const CourseRegistration& rhs) {
+    return std::strcmp(lhs.studentID, rhs.studentID) == 0;
+}
+
+bool operator>(const CourseRegistration& lhs, const CourseRegistration& rhs) {
+    return std::strcmp(lhs.studentID, rhs.studentID) > 0;
 }

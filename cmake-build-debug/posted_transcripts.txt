@@ -1,0 +1,13 @@
+StudentID: 122621
+	CourseID: 118, Grade:  
+	CourseID: 331, Grade:  
+
+StudentID: 122721
+	CourseID: 331, Grade:  
+	CourseID: 210, Grade:  
+
+StudentID: 123102
+	CourseID: 331, Grade:  
+	CourseID: 118, Grade:  
+	CourseID: 341, Grade:  
+

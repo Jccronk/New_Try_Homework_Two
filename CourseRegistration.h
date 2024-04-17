@@ -21,6 +21,7 @@ public:
     char studentID[7];
     char numOfCredits[2];
     char courseGrade[2];
+    char courseDescription[50];
 
     /**
      * @brief Default constructor for CourseRegistration.
@@ -100,6 +101,15 @@ public:
      * @param out The output stream to print to.
      */
     void Print (ostream &);
+
+    // Friend declarations for comparison operators
+    friend bool operator<(const CourseRegistration& lhs, const CourseRegistration& rhs);
+    friend bool operator==(const CourseRegistration& lhs, const CourseRegistration& rhs);
+    friend bool operator>(const CourseRegistration& lhs, const CourseRegistration& rhs);
+
+    // Friend declaration for the output operator
+    friend std::ostream& operator<<(std::ostream& os, const CourseRegistration& reg);
+    friend std::istream& operator>>(std::istream& is, CourseRegistration& reg);
 };
 
 

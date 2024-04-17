@@ -146,6 +146,24 @@ build CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationDriver.cpp.o: CXX_
   OBJECT_DIR = CMakeFiles/CourseRegistrationTest.dir
   OBJECT_FILE_DIR = CMakeFiles/CourseRegistrationTest.dir
 
+build CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationOutput.cpp.o: CXX_COMPILER__CourseRegistrationTest_unscanned_Debug /Users/jakecronk/CLionProjects/Assignment$ 5/CourseRegistrationOutput.cpp || cmake_object_order_depends_target_CourseRegistrationTest
+  DEP_FILE = CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationOutput.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/CourseRegistrationTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/CourseRegistrationTest.dir
+
+build CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationOutputSorted.cpp.o: CXX_COMPILER__CourseRegistrationTest_unscanned_Debug /Users/jakecronk/CLionProjects/Assignment$ 5/CourseRegistrationOutputSorted.cpp || cmake_object_order_depends_target_CourseRegistrationTest
+  DEP_FILE = CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationOutputSorted.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/CourseRegistrationTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/CourseRegistrationTest.dir
+
+build CMakeFiles/CourseRegistrationTest.dir/TranscriptPoster.cpp.o: CXX_COMPILER__CourseRegistrationTest_unscanned_Debug /Users/jakecronk/CLionProjects/Assignment$ 5/TranscriptPoster.cpp || cmake_object_order_depends_target_CourseRegistrationTest
+  DEP_FILE = CMakeFiles/CourseRegistrationTest.dir/TranscriptPoster.cpp.o.d
+  FLAGS = -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/CourseRegistrationTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/CourseRegistrationTest.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target CourseRegistrationTest
@@ -154,7 +172,7 @@ build CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationDriver.cpp.o: CXX_
 #############################################
 # Link the executable CourseRegistrationTest
 
-build CourseRegistrationTest: CXX_EXECUTABLE_LINKER__CourseRegistrationTest_Debug CMakeFiles/CourseRegistrationTest.dir/deltext1.cpp.o CMakeFiles/CourseRegistrationTest.dir/fixtext1.cpp.o CMakeFiles/CourseRegistrationTest.dir/lentext1.cpp.o CMakeFiles/CourseRegistrationTest.dir/CourseRegistration.cpp.o CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationDriver.cpp.o
+build CourseRegistrationTest: CXX_EXECUTABLE_LINKER__CourseRegistrationTest_Debug CMakeFiles/CourseRegistrationTest.dir/deltext1.cpp.o CMakeFiles/CourseRegistrationTest.dir/fixtext1.cpp.o CMakeFiles/CourseRegistrationTest.dir/lentext1.cpp.o CMakeFiles/CourseRegistrationTest.dir/CourseRegistration.cpp.o CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationDriver.cpp.o CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationOutput.cpp.o CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationOutputSorted.cpp.o CMakeFiles/CourseRegistrationTest.dir/TranscriptPoster.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk
   OBJECT_DIR = CMakeFiles/CourseRegistrationTest.dir
   POST_BUILD = :
