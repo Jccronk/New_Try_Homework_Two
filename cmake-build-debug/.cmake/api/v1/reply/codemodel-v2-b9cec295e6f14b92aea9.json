@@ -41,14 +41,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "CourseRegistrationTest::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-CourseRegistrationTest-Debug-4b810c01ea9165fba090.json",
+					"jsonFile" : "target-CourseRegistrationTest-Debug-0f7428d88b9bf2206a9c.json",
 					"name" : "CourseRegistrationTest",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "StudentTest::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-StudentTest-Debug-787a8ef957dc0c5ded0a.json",
+					"jsonFile" : "target-StudentTest-Debug-c030be4757675c2a5f5c.json",
 					"name" : "StudentTest",
 					"projectIndex" : 0
 				}
@@ -58,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/jakecronk/CLionProjects/Assignment2/cmake-build-debug",
-		"source" : "/Users/jakecronk/CLionProjects/Assignment2"
+		"build" : "/Users/jakecronk/CLionProjects/Assignment 5/cmake-build-debug",
+		"source" : "/Users/jakecronk/CLionProjects/Assignment 5"
 	},
 	"version" : 
 	{

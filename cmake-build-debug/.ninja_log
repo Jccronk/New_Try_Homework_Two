@@ -1,19 +1,14 @@
 # ninja log v5
-1	646	1708680710000850717	CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationDriver.cpp.o	5633fae5033b01c6
+3	363	1708681627679515590	CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationDriver.cpp.o	5633fae5033b01c6
 2	534	1708680290717745439	CMakeFiles/CourseRegistrationTest.dir/fixtext1.cpp.o	3df969a60d02a52b
 2	412	1708677905724432883	CMakeFiles/StudentTest.dir/deltext1.cpp.o	749e8c34865a9bea
 2	516	1708680313616150384	CMakeFiles/CourseRegistrationTest.dir/lentext1.cpp.o	77847796635df924
 2	403	1708677973483323424	CMakeFiles/StudentTest.dir/lentext1.cpp.o	949ce147795e530b
 3	544	1708677942618862153	CMakeFiles/StudentTest.dir/fixtext1.cpp.o	3c72de55c464c87f
-3	712	1708678330778854999	CMakeFiles/StudentTest.dir/TestStudent.cpp.o	7f738406be497c51
-0	62	1708680917915870876	build.ninja	b3fbf71d243bd2e4
-3	597	1708680516898796193	CMakeFiles/CourseRegistrationTest.dir/CourseRegistrationTest.cpp.o	630e80d65dee35bc
-712	817	1708678330886951328	StudentTest	e150f6d23cfefb2e
-0	665	1708680128973794602	CMakeFiles/CourseRegistrationTest.dir/CourseRegistration.cpp.o	3d484d0ad2e39037
-2	570	1708680824315074267	CMakeFiles/StudentTest.dir/Student.cpp.o	b587a67e62ee1928
+0	56	1713382967521563225	build.ninja	b3fbf71d243bd2e4
+4	602	1708681618635925400	CMakeFiles/StudentTest.dir/StudentDriver.cpp.o	fb1c134a97fa0d29
+603	726	1708681618761890290	StudentTest	3a9ce335e5e412d2
+3	312	1708681627628765848	CMakeFiles/CourseRegistrationTest.dir/CourseRegistration.cpp.o	3d484d0ad2e39037
+3	573	1708681618603792520	CMakeFiles/StudentTest.dir/Student.cpp.o	b587a67e62ee1928
 2	537	1708680256852098488	CMakeFiles/CourseRegistrationTest.dir/deltext1.cpp.o	60c5238d6f0be21d
-646	767	1708680710122891189	CourseRegistrationTest	6d4912b2ddf94e66
-0	56	1708680917915870876	build.ninja	b3fbf71d243bd2e4
-2	557	1708681114139064064	CMakeFiles/StudentTest.dir/Student.cpp.o	b587a67e62ee1928
-2	586	1708681114169678715	CMakeFiles/StudentTest.dir/StudentDriver.cpp.o	fb1c134a97fa0d29
-586	708	1708681114291282625	StudentTest	3a9ce335e5e412d2
+363	397	1708681627714028770	CourseRegistrationTest	6d4912b2ddf94e66

@@ -1,4 +1,4 @@
-/Users/jakecronk/CLionProjects/Assignment2/cmake-build-debug/CMakeFiles/StudentTest.dir
-/Users/jakecronk/CLionProjects/Assignment2/cmake-build-debug/CMakeFiles/CourseRegistrationTest.dir
-/Users/jakecronk/CLionProjects/Assignment2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/jakecronk/CLionProjects/Assignment2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/jakecronk/CLionProjects/Assignment 5/cmake-build-debug/CMakeFiles/StudentTest.dir
+/Users/jakecronk/CLionProjects/Assignment 5/cmake-build-debug/CMakeFiles/CourseRegistrationTest.dir
+/Users/jakecronk/CLionProjects/Assignment 5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jakecronk/CLionProjects/Assignment 5/cmake-build-debug/CMakeFiles/rebuild_cache.dir

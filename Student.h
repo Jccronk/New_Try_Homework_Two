@@ -76,6 +76,12 @@ public:
      * @param out The output stream to print to.
      */
     void Print(ostream &);
+
+    friend std::ostream& operator<<(std::ostream& os, const Student& student);
+
+    friend bool operator<(const Student& lhs, const Student& rhs);
+    friend bool operator==(const Student& lhs, const Student& rhs);
+    friend bool operator>(const Student& lhs, const Student& rhs);
 };
 
 

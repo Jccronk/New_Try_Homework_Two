@@ -1,12 +1,13 @@
-//
-// Created by Jake Cronk on 2/23/24.
-//
-
 #include "CourseRegistration.h"
 #include <cstring>
 #include <fstream>
 #include "fixtext1.h"
 
+/**
+ * @brief Test function for FixedTextBuffer with CourseRegistration.
+ * 
+ * This function demonstrates the usage of FixedTextBuffer with CourseRegistration objects.
+ */
 void testFixText(){
     cout << "\nTesting FixedTextBuffer with CourseRegistration" << endl;
 
@@ -47,6 +48,11 @@ void testFixText(){
     TestIn.close();
 }
 
+/**
+ * @brief Test function for LengthTextBuffer with CourseRegistration.
+ * 
+ * This function demonstrates the usage of LengthTextBuffer with CourseRegistration objects.
+ */
 void testLenText() {
     cout << "\nTesting LengthTextBuffer with CourseRegistration" << endl;
 
@@ -98,6 +104,11 @@ void testLenText() {
     TestIn.close();
 }
 
+/**
+ * @brief Test function for DelimTextBuffer with CourseRegistration.
+ * 
+ * This function demonstrates the usage of DelimTextBuffer with CourseRegistration objects.
+ */
 void testDelText() {
     cout << "\nTesting DelimTextBuffer with CourseRegistration" << endl;
 
@@ -149,8 +160,16 @@ void testDelText() {
     TestIn.close();
 }
 
+/**
+ * @brief The main function.
+ * 
+ * Runs the test functions for FixedTextBuffer, LengthTextBuffer, and DelimTextBuffer with CourseRegistration objects.
+ * 
+ * @return int Returns 0 on successful execution.
+ */
 int main(){
     testFixText ();
     testLenText ();
     testDelText ();
+    return 0;
 }
